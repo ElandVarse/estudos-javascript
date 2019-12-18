@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 4 - Modulo 2</title>
+    </head>
+
+    <body>
+        <style>
+            body{
+                background-color: #dadada;
+            }
+        </style>
+
+            <div id='Container'>
+                <!-- Foi necessário criar o form para resetar o input quando clicado -->
+                <form id="formulario"> 
+                    <label class='labela'>Nome</label> 
+                    <input type="text" id="nome" placeholder="Insira" maxlength="20">
+                </form>
+
+                <button class='botao' onclick="adicionar()">Adicionar</button>
+                <div id='app'></div> 
+
+            </div> 
+        
+        <script>
+
+            //Lista de estilos
+            var cont = document.querySelector('#Container');
+                cont.style.marginLeft='40%';
+                cont.style.marginTop='40px';
+
+            var lbl = document.querySelector('.labela');
+                lbl.style.color="#BD2B35";
+                lbl.style.fontWeight="bold";
+
+            var btn = document.querySelector('.botao');
+
+                btn.style.width = '90px';
+                btn.style.height = '40px';
+                btn.style.backgroundColor = '#BD2B35 ';
+                btn.style.borderRadius='30px';
+                btn.style.border="solid #A81B36 1px";
+                btn.style.color="white";
+                btn.style.fontWeight="bold";
+                btn.style.marginTop="10px";
+                btn.style.marginLeft="80px";
+                btn.style.boxShadow="2px 1px 4px #B0B0B0"
+
+            //Array desafio anterior
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            function adicionar() {
+                
+                var inputElement = document.querySelector('#nome').value; //recebe o valor do input
+                    nomes.push(inputElement); //Adiciona o nome ao fim da lista
+                    
+                    document.querySelector('#app').innerHTML = list(nomes).outerHTML;
+                    //reset do input é feito no final da função para não bugar o cod
+                    document.querySelector('#formulario').reset(); 
+                } 
+                
+            function list(nomes) {
+                
+                var listElement = document.createElement('ul');
+                
+                for(var i = 0; i < nomes.length; i++) {
+                    
+                    var item = document.createElement('li');
+
+                        //estilização dos itens da lista
+                        item.style.backgroundColor='#23206B';
+                        item.style.width='200px';
+                        item.style.marginTop='10px';
+                        item.style.color='white';
+                        item.style.fontWeight='bold';
+                        item.style.padding='5px 0px 5px 0px';
+                        item.style.boxShadow='2px 2px 4px #B0B0B0';
+                        item.style.marginLeft='-15px';
+                        item.style.borderRadius='30px';
+                        item.style.textAlign='center';   
+                        item.style.border='solid black 1px';
+                        item.style.listStyle='none';
+                    
+                    item.appendChild(document.createTextNode(nomes[i]));
+                    listElement.appendChild(item); 
+                    
+                    }
+                    return listElement;
+                    }
+                    document.querySelector('#app').appendChild(list(nomes));
+            </script>    
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 2 - Modulo 2</title>
+    </head>
+    <body>
+            <button class="botao" id='btnCriar' onclick="mostraQuad()" >Me aperte</button> 
+             
+            <script>
+    
+                var btn = document.querySelector('#btnCriar');
+    
+                    btn.style.width = '90px';
+                    btn.style.height = '40px';
+                    btn.style.backgroundColor = '#BD2B35 ';
+                    btn.style.border="solid #A81B36 1px";
+                    btn.style.color="white";
+                    btn.style.fontWeight="bold";
+                    btn.style.marginBottom="10px";
+                    btn.style.marginTop ="20%";
+                    btn.style.marginLeft="45%";
+                    btn.style.boxShadow="1px 1px 4px #6B191E";
+                    btn.style.position ="absolute";
+
+                
+                function mostraQuad(){
+    
+                    let box = document.createElement("div");
+                    box.style.width = "1250px";
+                    box.style.height = "100px";
+                    box.style.backgroundColor = "red"; 
+                    box.style.marginLeft= "-10px";
+                    box.style.marginTop = "-10px"; 
+                                    
+                    box.classList.add('box');
+                        document.body.appendChild(box);
+
+                    box.setAttribute('onmouseover', '(style.background= getRandomColor())') //Deus abençoe o setAttribute
+                }
+
+                function getRandomColor() {
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+               }
+
+            </script>
+     </body>
+</html>

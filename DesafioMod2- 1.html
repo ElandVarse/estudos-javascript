@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 1 - Modulo 2</title>
+    </head>
+    <body>
+        <button class="botao" onclick="mostraQuad()" >Me aperte</button> 
+        
+        <div id="app"> 
+             <div class="box"></div> 
+        </div>
+
+        <script>
+
+            var btn = document.querySelector('.botao');
+
+                btn.style.width = '90px';
+                btn.style.height = '40px';
+                btn.style.backgroundColor = '#BD2B35 ';
+                btn.style.borderRadius='30px';
+                btn.style.border="solid #A81B36 1px";
+                btn.style.color="white";
+                btn.style.fontWeight="bold";
+                btn.style.marginLeft="45%";
+                btn.style.boxShadow="2px 1px 4px #B0B0B0"
+            
+            
+            function mostraQuad(){
+
+                let box = document.createElement("div");
+                box.style.width = "100px";
+                box.style.height = "100px";
+                box.style.marginLeft = '45%';
+                box.style.backgroundColor = "#f00"; 
+                                
+                box.classList.add('box');
+                    document.body.appendChild(box);
+
+                box('onmouseover','btn(style.background = getRandomColor())')
+                }
+
+                function getRandomColor() {
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                    }
+                    var newColor = getRandomColor(); // #E943F0
+
+        </script>
+    </body>
+</html>

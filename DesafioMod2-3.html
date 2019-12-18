@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio 3 - Modulo 2</title>
+    </head>
+    <body>
+        
+        <div id="elenco"></div>
+
+            <script>
+                    var nomes =  [ 
+                        set0 = ["Diego", "Gabriel", "Lucas"] //set fora utilizado pra tornar esses nomes uma espécie de objeto
+                    ];
+                    
+                    function fazUl(nomes) {
+
+                        var list = document.createElement('ul'); 
+
+                        for(var i = 0; i < nomes.length; i++) {
+                            
+                            var item = document.createElement('li');
+                            item.appendChild(document.createTextNode(nomes[i])); //createTextNode serve pra colocar nome num elemento, no caso o texto que queremos é o array.
+                            list.appendChild(item); //Lista 'ul' vai receber um elemento 'li' dentro do for até o limite do array.
+                        }
+                        return list;
+                    }
+                    document.getElementById('elenco').appendChild(fazUl(nomes[0])); //fora atribuido a função a div elenco no html
+
+            </script>
+            
+    </body>
+</html>
