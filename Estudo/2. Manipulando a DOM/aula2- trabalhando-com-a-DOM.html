@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabalhando com a DOM - Buscando e Selecionando Tags/Ids/Classes etcs</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome"/>
+            <button class='botao'>Adicionar</button>    
+        </div>
+        
+        <script>
+            /*var inputElement = id = document.getElementById('nome');
+            var inputElement = id = document.querySelector('input');
+            console.log(inputElement); Seletores */
+            var inputElement = document.querySelector('input[name = nome]'); //salvar o valor do que é escrito no input
+            var elementoBotao = document.querySelector('button.botao'); 
+        
+            elementoBotao.onclick = function() {
+                var texto = inputElement.value; //atribuição do valor do input a uma variável
+                alert(texto);
+            }
+
+        </script>
+    </body>
+</html>

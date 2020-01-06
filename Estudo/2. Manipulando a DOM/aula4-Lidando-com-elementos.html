@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lidando com elementos</title>
+    </head>
+    <body>
+        <div id="app">
+            <input id="nome"/>
+        </div>
+        
+        <script>
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'https://skylab.rocketseat.com.br/');
+            linkElement.setAttribute('title', 'Site da Rocketseat')
+            
+            var textElement = document.createTextNode('Acessar site da rocketseat');
+            linkElement.appendChild(textElement);
+
+            var container = document.querySelector('#app');
+            container.appendChild(linkElement);
+
+            var inputElement = document.querySelector('#nome');
+            //container.removeChild(inputElement) -- remover input
+        </script>
+    </body>
+</html>

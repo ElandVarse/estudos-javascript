@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+    <body>
+         <button class='botao' id='btnCriar' onClick="gerarQuadrado()">Gerar novo</button>
+            <div id="app">
+                <div class="box"></div>
+            </div>
+
+        <script>
+            var btnCriar = document.querySelector('#btnCriar')
+                btnCriar.style.color = '#fff'
+                btnCriar.style.fontWeight = 'bold';
+                btnCriar.style.backgroundColor = '#424242';
+                btnCriar.style.border = 'solid #ddd';
+                btnCriar.style.width = '200px';
+                btnCriar.style.height = '40px';
+                btnCriar.style.marginLeft = '45%';
+
+            function gerarQuadrado() {
+
+                let boxElement = document.createElement("div");
+                boxElement.style.width = '180px';
+                boxElement.style.height = '180px';
+                boxElement.style.margin = '10px';
+                boxElement.style.backgroundColor = '#f00';
+
+            //adiciona a classe .box na div criada
+            boxElement.classList.add('box');
+
+                document.body.appendChild(boxElement);
+}
+
+        </script>
+    </body>
+</html>

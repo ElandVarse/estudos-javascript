@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lidando com elementos</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome"/>
+            <button classe='botao'>Adicionar</button>
+        </div>
+        
+        <script>
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'https://skylab.rocketseat.com.br/');
+            
+            var textElement = document.createTextNode('Acessar essa disgraça');
+            linkElement.appendChild(textElement);
+        </script>
+    </body>
+</html>
