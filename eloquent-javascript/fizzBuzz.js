@@ -1,13 +1,12 @@
-var num;
-
-
-for(num=1; num<101; num++) {
-    var result= '';
-    if(num%3===0){
-        result+='Fizz'
+for(var i=1; i<101; i++){
+    var num='';
+    if(i%3===0){
+        num+='Fizz';
     }
-    if(num%5===0){
-        result+='Buzz'
+    if(i%5===0){
+        num+='Buzz';
     }
-    console.log(result || num)
+    console.log(num || i) //ou não retorna variável vazia em relação a uma não vazia
+
+    //Num = num+'nome' serve pra salvar o if anterior, aparecendo a próxima junto. Então o for retorna transformando num em vazia e recomeçando o ciclo;
 }
