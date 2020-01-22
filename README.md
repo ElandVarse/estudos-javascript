@@ -2,7 +2,7 @@
 
 .Desafios - Rocketseat(Separados nos modulos)
 
- Exercícios Javascript
+.Exercícios Javascript
  
 .Códigos e desafios que eu encontrar
 
