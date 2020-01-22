@@ -1,6 +1,8 @@
 # Estudos-Javascript <br/>
-Desafios - rocketseat <br/>
-Resolvendo desafios propostos pelo curso gratuito da rocketseat de javascript + Eloquent Javascript + Códigos diversos que eu fizer. Modulos se referem ao curso javascript básico da rocketseat
+
+.Desafios - Rocketseat(Separados nos modulos)
+ Exercícios Javascript
+.Códigos e desafios que eu encontrar
 
 Link Curso: <br/>
 https://rocketseat.com.br/starter/curso-gratuito-javascript <br/>
