@@ -1,7 +1,9 @@
 # Estudos-Javascript <br/>
 
 .Desafios - Rocketseat(Separados nos modulos)
+
  Exercícios Javascript
+ 
 .Códigos e desafios que eu encontrar
 
 Link Curso: <br/>
