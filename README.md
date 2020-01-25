@@ -1,6 +1,6 @@
 # Estudos-Javascript <br/>
 
-.Desafios - Rocketseat(Separados nos modulos)
+.Desafios - Rocketseat
 
 .Exercícios Eloquent Javascript
  
