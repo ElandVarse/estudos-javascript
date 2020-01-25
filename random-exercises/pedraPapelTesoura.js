@@ -2,7 +2,6 @@
 
 //Problema: jogo não aceita que o primeiro input não seja pedra
 
-
 function computerPlay(){ //Resultado computador
     const computer = ['pedra', 'papel', 'tesoura'];
     var i = ( Math.floor(Math.random() * 3));
@@ -18,7 +17,6 @@ function playerSelection(){ //Resultado jogador
         case 'tesoura':
             console.log(`Você escolheu ${caseSense}`);
             return caseSense;
-            break;
         default:
             alert('Aí não em cara')
     }
@@ -65,4 +63,3 @@ function jokenpo(){
     }
 }
 jokenpo();
-
