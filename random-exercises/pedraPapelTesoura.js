@@ -2,64 +2,82 @@
 
 //Problema: jogo não aceita que o primeiro input não seja pedra
 
-function computerPlay(){ //Resultado computador
+//Seleção do computador - randomica
+function computerPlay(){ 
     const computer = ['pedra', 'papel', 'tesoura'];
     var i = ( Math.floor(Math.random() * 3));
-    console.log(`Computador escolheu ${computer[i]}`)
     return computer[i]; 
 }
-function playerSelection(){ //Resultado jogador
+//Seleção do jogador
+function playerSelection(){ 
     player = prompt('Digita aí meu parceiro');
     var caseSense = player.toLowerCase();
     switch(caseSense){
         case 'pedra':
         case 'papel':
         case 'tesoura':
-            console.log(`Você escolheu ${caseSense}`);
             return caseSense;
         default:
             alert('Aí não em cara')
     }
 }
+//Jogo em si
 function jokenpo(){
-    if(playerSelection()==='pedra'){
-        switch(computerPlay()){
+    //Lembrando que dentro do escopo de uma função, variáveis valem apenas pra si
+    let player = playerSelection();
+    let computer = computerPlay();
+
+    switch(player){
+        case 'pedra':
+        switch(computer){
             case 'pedra':
-                alert('Empate');
+                alert(`Computador escolheu ${computer}`);
+                alert('Empate')
                 break;
             case 'papel':
-                alert('Perdeu');
+                alert(`Computador escolheu ${computer}`);
+                alert('Você perdeu')
                 break;
             case 'tesoura':
-                alert('Venceu');
+                alert(`Computador escolheu ${computer}`);
+                alert('Você venceu')
                 break;
         }
-    }
-    else if(playerSelection()==='papel'){
-        switch(computerPlay()){
+        break;
+
+    case 'papel':
+        switch(computer){
             case 'pedra':
-                alert('Venceu');
+                alert(`Computador escolheu ${computer}`);
+                alert('Você venceu')
                 break;
             case 'papel':
-                alert('Empate');
+                alert(`Computador escolheu ${computer}`);
+                alert('Empate')
                 break;
             case 'tesoura':
-                alert('Perdeu');
+                alert(`Computador escolheu ${computer}`);
+                alert('Você perdeu')
                 break;
         }
-    }
-    else if(playerSelection()==='tesoura'){
-        switch(computerPlay()){
+    break;
+
+    case 'tesoura':
+        switch(computer){
             case 'pedra':
-                alert('Perdeu');
+                alert(`Computador escolheu ${computer}`);
+                alert('Você perdeu')
                 break;
             case 'papel':
-                alert('Venceu');
+                alert(`Computador escolheu ${computer}`);
+                alert('Você ganhou')
                 break;
             case 'tesoura':
-                alert('Empate');
+                alert(`Computador escolheu ${computer}`);
+                alert('Empate')
                 break;
-        }
+         }
+         break;
     }
 }
 jokenpo();
